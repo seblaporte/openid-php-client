@@ -13,10 +13,6 @@
         {
             "name": "Sebastien Laporte",
             "email": "seb_laporte_33@yahoo.com"
-        },
-        {
-            "name": "Michael Jett",
-            "email": "mjett@mitre.org"
         }
     ],
     "autoload": {
