@@ -1,5 +1,5 @@
 {
-    "name": "seblaporte/openidPhpClient",
+    "name": "apside-top/openid-php-client",
     "description": "A simple library that allows an application to authenticate a user through the basic OpenID Connect flow",
     "type": "library",
     "require": {
