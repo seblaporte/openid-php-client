@@ -44,15 +44,6 @@ function b64url2b64($base64url) {
     return strtr($base64url, '-_', '+/');
 }
 
-
-/**
- * OpenIDConnect Exception Class
- */
-class OpenIDConnectClientException extends Exception
-{
-
-}
-
 /**
  * Require the CURL and JSON PHP extentions to be installed
  */
