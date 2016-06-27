@@ -2,6 +2,8 @@ PHP OpenID Connect Client
 ========================
 A simple library that allows an application to authenticate a user through the basic OpenID Connect flow.
 
+Adapted from [jumbojett/OpenID-Connect-PHP](https://github.com/jumbojett/OpenID-Connect-PHP) created by Michael Jett.
+
 # Requirements #
  1. PHP 5.2 or greater
  2. CURL extension
