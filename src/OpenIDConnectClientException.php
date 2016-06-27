@@ -1,5 +1,7 @@
 <?php
 
+namespace openidPhpClient;
+
 /**
  * OpenIDConnect Exception Class
  */

@@ -2,8 +2,6 @@
 
 namespace openidPhpClient;
 
-use openidPhpClient;
-
 /**
  * OpenID Connect Client for PHP5
  *
