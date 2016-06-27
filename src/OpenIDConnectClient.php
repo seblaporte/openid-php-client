@@ -418,17 +418,22 @@ class OpenIDConnectClient
      * @return mixed
      */
     public function requestUserInfo() {
+
+        if ($this->getAccessToken()) {
+
+            $user_info_endpoint = $this->getProviderConfigValue("userinfo_endpoint");
+
+            //The accessToken has to be send in the Authorization header, so we create a new array with only this header.
+            $headers = array("Authorization: Bearer {$this->getAccessToken()}");
+
+            $user_json = json_decode($this->fetchURL($user_info_endpoint,null,$headers));
+
+            $this->userInfo = $user_json;
+
+            return $this->userInfo;
+        }
         
-        $user_info_endpoint = $this->getProviderConfigValue("userinfo_endpoint");
-
-        //The accessToken has to be send in the Authorization header, so we create a new array with only this header.
-        $headers = array("Authorization: Bearer {$this->getAccessToken()}");
-
-        $user_json = json_decode($this->fetchURL($user_info_endpoint,null,$headers));
-
-        $this->userInfo = $user_json;
-
-        return $this->userInfo;
+        return false;
     }
 
     /**
