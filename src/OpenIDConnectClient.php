@@ -2,6 +2,8 @@
 
 namespace openidPhpClient;
 
+use openidPhpClient;
+
 /**
  * OpenID Connect Client for PHP5
  *
@@ -367,10 +369,10 @@ class OpenIDConnectClient
             throw new OpenIDConnectClientException('Error : key unreadable');
         }
 
-        $jwtSigner = new Lcobucci\JWT\Signer\Rsa\Sha256();
+        $jwtSigner = new \Lcobucci\JWT\Signer\Rsa\Sha256();
 
         try {
-            $parsedJwt = (new Lcobucci\JWT\Parser())->parse((string) $jwt);
+            $parsedJwt = (new \Lcobucci\JWT\Parser())->parse((string) $jwt);
         } catch (\RuntimeException $e) {
             return false;
         }

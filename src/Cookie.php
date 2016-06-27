@@ -2,6 +2,8 @@
 
 namespace openidPhpClient;
 
+use openidPhpClient;
+
 class Cookie
 {
     /**
